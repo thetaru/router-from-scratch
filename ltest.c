@@ -36,7 +36,7 @@ int main(int argc, char *argv[], char *envp[])
             if (size >= sizeof(struct ether_header)) {
                 PrintEtherHeader((struct ether_header *)buf, stdout);
             } else {
-                fprintf(stderr, "read size(%d) < %d\n", size, sizeof(struct ether_header));
+                fprintf(stderr, "read size(%d) < %ld\n", size, sizeof(struct ether_header));
             }
         }
     }
