@@ -13,5 +13,12 @@ PCAP_TARGET=pcap
 pcap: $(PCAP_OBJS)
 		$(CC) -o $(PCAP_TARGET) $(PCAP_OBJS) $(LDFLAGS)
 
+BRIDGE_OBJS=bridge.o netutil.o
+BRIDGE_SRCS=$(BRIDGE_OBJS:%.o=%.c)
+BRIDGE_TARGET=bridge
+
+bridge: $(BRIDGE_OBJS)
+		$(CC) -o $(BRIDGE_TARGET) $(BRIDGE_OBJS) $(LDFLAGS)
+
 clean:
 		rm -f ltest *.o *~ tmp*
