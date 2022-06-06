@@ -21,4 +21,4 @@ bridge: $(BRIDGE_OBJS)
 		$(CC) -o $(BRIDGE_TARGET) $(BRIDGE_OBJS) $(LDFLAGS)
 
 clean:
-		rm -f ltest *.o *~ tmp*
+		rm -f ltest pcap bridge *.o *~ tmp*
